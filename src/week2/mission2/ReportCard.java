@@ -24,6 +24,18 @@ class Student {
         totalScore = koreanGrade + mathGrade + englishGrade;
         average = totalScore / 3.0;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getTotalScore() {
+        return totalScore;
+    }
+
+    public double getAverage() {
+        return average;
+    }
 }
 
 public class ReportCard {
