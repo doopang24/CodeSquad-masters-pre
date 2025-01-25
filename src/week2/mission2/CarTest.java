@@ -23,7 +23,7 @@ class HyundaiFactory {
 
 class HyundaiCar implements Car {
     private static int carCount = 0;    // 생성된 자동차 수를 추적
-    private int carNumber;   // 자동차 고유 번호
+    private int carNumber;   // 자동차 고유 번호, 인스턴스마다 고유해야 하므로 static 붙이지 않음
 
     public HyundaiCar() {
         carCount++;
