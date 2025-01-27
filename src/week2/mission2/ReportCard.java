@@ -43,7 +43,14 @@ public class ReportCard {
         String path = "C:\\intelij\\CodeSquad-PreCourse\\input.txt";
         try {
             BufferedReader reader = new BufferedReader(new FileReader(path));
-            String line;
+            String line = reader.readLine();    // 첫 줄
+
+            while ((line = reader.readLine()) != null) {
+                String[] data = line.split(", ");
+                Student student = new Student(data[0], Integer.parseInt(data[1]), data[2], Integer.parseInt(data[3]), Integer.parseInt(data[4]), Integer.parseInt(data[5]));
+
+
+            }
         } catch (IOException e) {
             System.out.println("파일을 읽는 중 오류가 발생했습니다. " + e.getMessage());
         }
